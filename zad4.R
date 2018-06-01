@@ -48,7 +48,3 @@ ggplot(data = mpg) +
   geom_histogram(mapping = aes(displ, fill = displ), bins = 12, binwidth = 20) +
   labs( title = "Rozkład pojemności silnika samochodów", x = "klasa", y = "pojemność silnika") +
   theme_linedraw(base_size = 9)
-
-ggplot(data = mpg) +
-  geom_histogram(mapping = aes(displ), binwidth = 20)
-
