@@ -1,4 +1,4 @@
-#### KODUJ ZAWSZE NA UTF-8 bo ci siÄ™ bÄ™dÄ… krzaczyÄ‡ (NIE MA TAKIEGO SÅOWA) polskie znaki
+
 
 library(tidyverse)
 
@@ -9,52 +9,41 @@ movies
 filter(movies, year == 2005, Comedy == 1 )
 
 # zad5-3
-#AZ:
-#budzetowosc <-  movies %>% # PO CO?
-#Tak w zupeÅ‚noÅ›ci wystarczy:
 
-     select(movies, title, year, budget) %>%
+budzetowosc <-  movies %>% 
+     select(title, year, budget) %>%
      arrange(desc(budget))
 
-
 # zad5-4
-# UznaÅ¼am, Å¼e rating > 7 oznacza dobry film. 
-#AZ: PANI SPECJALISTA CO NIE WIDZIAÅA GIRL. INTERRUPTED XD
+# Uzna³am, ¿e rating > 7 oznacza dobry film.
 
-# best_animations <- movies %>% #AZ: PO CO AGAIN
-# TO JEST SUPER ROZWIÄ„ZANIE <3
-  filter(movies, Animation == 1, year >= 1990 & year < 2000, votes >= (mean(votes)) , rating > 7) %>%
+best_animations <- movies %>%
+  filter(Animation == 1, year >= 1990 & year < 2000, votes >= (mean(votes)) , rating > 7) %>%
   arrange(desc(rating)) %>% 
-  select(title, year, rating)
-
+  select(title,year,rating)
  
 
 # zad5-5
-# Tu bym chciaÅ‚a po prostu wyÅ›wietliÄ‡ 10 pierwszych a nie umiem. 
-# Nie da siÄ™ tego zrobiÃ¦ selectem, bo to pokazuje zmienne, a nie obserwacje
-# trzeba by byÅ‚o wziÄ…Ä‡ liczbÄ™ porzÄ…dkowÄ… i jÄ… zrobiÄ™ w filter n < 10 (but how?)
-# ale tak Å¼eby to byÅ‚o na koÅ„cu
-#top_n zapamietaj sb te funkcje
+# Tu bym chcia³a po prostu wyœwietliæ 10 pierwszych a nie umiem. 
+# Nie da siê tego zrobiæ selectem, bo to pokazuje zmienne, a nie obserwacje
+# trzeba by by³o wzi¹æ liczbê porz¹dkow¹ i j¹ zrobiæ w filter n < 10 (but how?)
+# ale tak ¿eby to by³o na koñcu
 
 
-# dramatyczne_dramaty <- movies %>% # LASKA PO CO TY TWORZYSZ TE NOWE ZMIENNE, WYJEB TO
-  filter(movies, Drama == 1, length >= (mean(length))) %>%
+dramatyczne_dramaty <- movies %>%
+  filter(Drama == 1, length >= (mean(length))) %>%
   select(title, length, year) %>%
-  arrange(desc(length)) %>%
-  top_n(10)
+  arrange(desc(length))
 
-#AZ: Jest po prostu taka funkcja, opÅ‚acaÅ‚o siÄ™ przeczytac R4ds
 
 # zad5-6
 
-#Czy tu siÄ™ da wywalÄ‡Ã¦ to NA z kategorii mpaa ? ChciaÅ‚abym
-#AZ: Ja bym to zrobiÅ‚a najproÅ›ciej tak:
+#Czy tu siê da wywaliæ to NA z kategorii mpaa ? Chcia³abym
 
-#kategorie_mpaa <- movies %>% 
- select(movies, rating, mpaa) %>%
-  filter (mpaa != "NA") %>%
+kategorie_mpaa <- movies %>%
+ select(rating, mpaa) %>%
   group_by(mpaa) %>%
-  summarise( rating_mean = mean(rating, na.rm = ), rating_mad = mad(rating, na.rm = T))
+  summarise( rating_mean = mean(rating, na.rm = T), rating_mad = mad(rating, na.rm = T))
   
   
 
