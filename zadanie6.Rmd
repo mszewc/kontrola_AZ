@@ -26,13 +26,13 @@ Chleb to pieczywo otrzymywane z wypieku ciasta, bÄ™dÄ…cego jednorodnym po�
 Ludzie wypiekają i jedzą chleb już od 12 tysięcy lat. Prawdopodobnie pierwszym chlebem było pieczywo zbożowe w postaci ugotowanej pasty, która była mieszanką różnych zbóż. **Najstarszy chleb jaki udało się odnaleźć archeologom pochodzi z Krety, a jego wiek określa się na 6100 lat.**
 Początkowo bochenki były płaskie i twarde. W dzisiejszych czasach uznano by zapewne, że nie nadają się do jedzenia.Dopiero Egipcjanie około 2600 lat p.n.e. wpadli na to, w jaki sposób uczynić chleb pulchnym. To oni ponad 4000 lat temu po raz pierwszy upiekli chleb na zakwasie. Jest wiele opowieści na temat powstania zakwasu. Jedna z nich mówi, że pewna niewolnica zapomniała o papce zbożowej pozostawionej na słońcu. Miała z niej upiec placki dla swojego pana. Kiedy okazało się, że owa papka zaczęła fermentować, wystraszyła się, że zostanie ukarana za zmarnowanie ciasta. Postanowiła więc mimo to upiec placki. I okazało się, że były bardziej pulchne i smaczniejsze niż poprzednie. 
 
-### średniowiecz
+### Średniowiecz
 Archaiczną formę chleba wśród Słowian, która przeznaczona była do codziennego spożycia stanowił placek chlebowy zwany podpłomykiem noszący również w języku staropolskim nazwę wychopieniek[6]. Formą pieczywa odświętnego był kołacz stanowiący istotny element wesel i innych świąt. W okresie późniejszym, średniowieczną sztukę piekarską rozwijano w klasztorach i rzemieślniczych (cechowych) piekarniach miejskich.
 
 ### Wynalezienie chleba krojonego
 **Otto Frederick Rohwedder**  uważany jest powszechnie za wynalazcę przemysłowego chleba porcjowanego. W 1912 r. Rohwedder opatentował maszynę do automatycznego krojenia chleba, jednak problemy z utrzymaniem świeżości takiego pieczywa zniechęciły go do uruchomienia produkcji na większą skalę. Dopiero w 1928 r., po emigracji do USA, Rohwedder wrócił do swojego wcześniejszego pomysłu, projektując linię produkcyjną, która najpierw kroiła, a następnie natychmiast szczelnie pakowała pokrojony chleb. Maszyna ta została zainstalowana i uruchomiona po raz pierwszy przez przedsiębiorstwo Chillicothe Baking Company w piekarni w Chillicothe, Missouri (USA). **Pierwsze kromki powstały 7 lipca tego samego roku.**
 
-# Przepis na *chleb graham na droĹĽdzach*
+# Przepis na *chleb graham na drożdżach*
 ### Składniki
 #### Składniki na zaczyn
 - 10 g świeżych drożdży
@@ -58,8 +58,8 @@ Archaiczną formę chleba wśród Słowian, która przeznaczona była do codzien
 5. Wyrośnięte ciasto przełożyć na blat (można blat delikatnie posmarować oliwą, by ciasto się nie przyklejało), rozpłaszczyć i usunąć z ciasta pęcherzyki powietrza. Następnie uformować z ciasta podłużny bochenek i przełożyć go do formy o wymiarach 30 cm x 10 cm, wysmarowanej np. olejem i wysypanej otrębami żytnimi. Formę przykryć folią spożywczą i całość pozostawić do wyrośnięcia na ok. 20 minut – ciasto powinno wyrosnąć do brzegów formy.
 
 ### Pieczenie
-1.Piekarnik nagrzać do temperatury 200 stopni C, program „góra + dół”.
-2.Wyrośnięty chleb wstawić do nagrzanego piekarnika i piec ok. 50min – 1 godziny.
+1. Piekarnik nagrzać do temperatury 200 stopni C, program „góra + dół”.
+2. Wyrośnięty chleb wstawić do nagrzanego piekarnika i piec ok. 50min – 1 godziny.
 3. Gdyby skórka chleba zbyt szybko się zarumieniła – należy formę przykryć folią aluminiową i dalej piec. Chleb pod koniec pieczenia można wyciągnąć z formy i dopiec go już bez foremki, aż postukany od spodu będzie wydawał głuchy odgłos.
 
 [Tu znajdziesz więcej przepisów](http://przepisnachleb.pl/)
@@ -131,6 +131,11 @@ W kulturze ludowej chleb był nie tylko symbolem pożywienia, ale także dostatk
 
 ## Motyw chleba w poezji
 
+********
+A czy tu by dało radę zachować podział na wersy? Czy trzeba stawiać ukośniki? 
+
+*****************
+
 **Julian Tuwim** *Krwawy chleb*
 
 Wzrośnie wam z tłustej ziemi niebywałe zboże: 
@@ -150,6 +155,7 @@ Tryśnie z chleba waszego strumień krwi czerwony.
 
 
 **Cyprian Kamil Norwid** *Moja piosenka*
+
 Do kraju tego, gdzie kruszynę chleba 
 Podnoszą z ziemi przez uszanowanie 
 Dla darów Nieba.... 
@@ -195,7 +201,7 @@ Zapamiętałam tylko, że trzeba dodaÄ‡ obrazek do folderu z tym projektem, a
 **Jerzy Duda- Gracz**
 
 
-** Elvaristo Baschenis**
+**Elvaristo Baschenis**
 
 
 **Pieter de Hooch**
