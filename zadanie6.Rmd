@@ -3,21 +3,19 @@ title: "Chleb jako ważny element ludzkiego życia"
 author: "Maria Szewc"
 date: "14 czerwca 2018"
 output: 
-html_document:
-  theme: yeti
-df_print: paged
+  rmarkdown::html_document:
+    theme: spacelab
+    highlight: tango
+    df_print: paged
+    toc: true
+    code_folding: hide
   
 ---
 
-************
-Tu nie umiem pododawać w tym tytule tych rzeczy żeby wszystko działało, bo to wcale nie jest nigdzie wprost napisane (jak dla mnie). I nie chodzi tu wcale o wcięcia :p 
-Chciałabym też, żeby tu był‚ spis treści, ale w tych *cheatsheet* dla głąbów nie napisali, a z lekcji to nie pamiętam. I nie znam też innych theme, a nie mogę odnaleźć tej listy
-
-************
 
 # Czym jest chleb?
 
-Chleb to pieczywo otrzymywane z wypieku ciasta, bÄ™dÄ…cego jednorodnym połączczeniem mąki zbożowej różnego gatunku i wody, poddanego najczęściej, ale nie zawsze, fermentacji alkoholowej (z wykorzystaniem drożdży), wyrobionego w bochny różnego kształtu i wielkości.
+Chleb to pieczywo otrzymywane z wypieku ciasta, będącego jednorodnym połączczeniem mąki zbożowej różnego gatunku i wody, poddanego najczęściej, ale nie zawsze, fermentacji alkoholowej (z wykorzystaniem drożdży), wyrobionego w bochny różnego kształtu i wielkości.
 
 # Historia chleba
 
@@ -33,12 +31,16 @@ Archaiczną formę chleba wśród Słowian, która przeznaczona była do codzien
 **Otto Frederick Rohwedder**  uważany jest powszechnie za wynalazcę przemysłowego chleba porcjowanego. W 1912 r. Rohwedder opatentował maszynę do automatycznego krojenia chleba, jednak problemy z utrzymaniem świeżości takiego pieczywa zniechęciły go do uruchomienia produkcji na większą skalę. Dopiero w 1928 r., po emigracji do USA, Rohwedder wrócił do swojego wcześniejszego pomysłu, projektując linię produkcyjną, która najpierw kroiła, a następnie natychmiast szczelnie pakowała pokrojony chleb. Maszyna ta została zainstalowana i uruchomiona po raz pierwszy przez przedsiębiorstwo Chillicothe Baking Company w piekarni w Chillicothe, Missouri (USA). **Pierwsze kromki powstały 7 lipca tego samego roku.**
 
 # Przepis na *chleb graham na drożdżach*
+
 ### Składniki
+
 #### Składniki na zaczyn
 - 10 g świeżych drożdży
 - pół łyżeczki  cukru
 - 40 g letniej wody
 - 1 łyżka mąki pszennej typ 480 lub 550
+
+
 #### Składniki na ciasto właściwe
 - 50 g mąki żytniej razowej typ 2000
 - 200 g maki pszennej graham lub pszennej razowej typ 1850
@@ -58,6 +60,7 @@ Archaiczną formę chleba wśród Słowian, która przeznaczona była do codzien
 5. Wyrośnięte ciasto przełożyć na blat (można blat delikatnie posmarować oliwą, by ciasto się nie przyklejało), rozpłaszczyć i usunąć z ciasta pęcherzyki powietrza. Następnie uformować z ciasta podłużny bochenek i przełożyć go do formy o wymiarach 30 cm x 10 cm, wysmarowanej np. olejem i wysypanej otrębami żytnimi. Formę przykryć folią spożywczą i całość pozostawić do wyrośnięcia na ok. 20 minut – ciasto powinno wyrosnąć do brzegów formy.
 
 ### Pieczenie
+
 1. Piekarnik nagrzać do temperatury 200 stopni C, program „góra + dół”.
 2. Wyrośnięty chleb wstawić do nagrzanego piekarnika i piec ok. 50min – 1 godziny.
 3. Gdyby skórka chleba zbyt szybko się zarumieniła – należy formę przykryć folią aluminiową i dalej piec. Chleb pod koniec pieczenia można wyciągnąć z formy i dopiec go już bez foremki, aż postukany od spodu będzie wydawał głuchy odgłos.
@@ -82,24 +85,26 @@ No i teraz tu powinno wyskoczyć to tibble czy coś. I ogólnie to mi działa we
 *******************
 
 
-```{r}
-library(tidyverse)
-piekarnie_Arkusz1
+```{r echo = FALSE}
+library(readr)
+piekarnie_arkusz1 <- read_csv("piekarnie_arkusz1.csv") 
+piekarnie_arkusz1
 ```
 
 ### Najstarsze piekarnie
-```{r}
-piekarnie_Arkusz1 %>%
-  filter(pieczywo == 1, miasto == "gdaĹ„sk" ) %>%
+
+```{r echo = TRUE}
+piekarnie_arkusz1 %>%
+  filter(piekarnie_arkusz1, pieczywo == 1, miasto == "gdańsk") %>%
   select(nazwa, lokale, rok) %>%
-  arrange(rok)
+  arrange((desc(rok)
 ```
 
 ### Piekarnie posiadające więcej niż 5 lokali, założone po 1995 roku
 
-```{r}
-piekarnie_Arkusz1 %>%
-  filter(rok > 1995, lokale > 5) %>%
+```{r echo = FALSE}
+piekarnie_arkusz1 %>%
+  filter(rok > 1995 & lokale > 5) %>%
   select(nazwa, rok, lokale) %>%
   arrange(desc(rok))
 ```
@@ -108,12 +113,10 @@ piekarnie_Arkusz1 %>%
 # Ilość lokali piekarni, które nie zostały założone w Gdańsku
 
 
-```{r}
-piekarnie_Arkusz1 %>%
-  filter(miasto != "gdaĹ„sk", lokale > 5) %>%
+```{r echo = FALSE}
+  filter(piekarnie_arkus1, miasto != "gdańsk", lokale > 5) %>%
   select(nazwa, rok, lokale) %>%
   arrange(desc(lokale))
-
 ```
 
 # Ilość cukierni w kilku miastach woj. pomorskiego
@@ -121,7 +124,7 @@ piekarnie_Arkusz1 %>%
 ```{r}
 ggplot(data = piekarnie_Arkusz1)+
   geom_col(mapping = aes(x= miasto, y = lokale))+
-  labs(title= "IloĹ›Ä‡ lokali w miastach", x= "Miasto", y= "IloĹ›Ä‡ lokali")+
+  labs(title= "Ilość lokali w miastach", x= "Miasto", y= "Ilość lokali")+
   theme_classic(10)
 ```
 # Chleb w kulturze
@@ -131,17 +134,12 @@ W kulturze ludowej chleb był nie tylko symbolem pożywienia, ale także dostatk
 
 ## Motyw chleba w poezji
 
-********
-A czy tu by dało radę zachować podział na wersy? Czy trzeba stawiać ukośniki? 
-
-*****************
-
 **Julian Tuwim** *Krwawy chleb*
 
-Wzrośnie wam z tłustej ziemi niebywałe zboże: 
-Ciężkie, ogromne kłosy, napęczniałe ziarna, 
-Cuda się będą działy w pulchnej ziemnej korze, 
-Za ziarno każde - korzec da wam gleba czarna. 
+ Wzrośnie wam z tłustej ziemi niebywałe zboże: 
+ Ciężkie, ogromne kłosy, napęczniałe ziarna, 
+ Cuda się będą działy w pulchnej ziemnej korze, 
+ Za ziarno każde - korzec da wam gleba czarna. 
 
 Zbierzcie plon zasobny na długich lat wiele, 
 Wymłócicie cepami dary płodnej gleby, 
@@ -192,19 +190,22 @@ Tęskno mi, Panie...
 
 ## Motyw chleba w malarstwie
 
-******
-
-Zapamiętałam tylko, że trzeba dodaÄ‡ obrazek do folderu z tym projektem, ale jak je wstawiać to już nie mam pojęcia
-
-***************
-
-**Jerzy Duda- Gracz**
 
 
-**Elvaristo Baschenis**
+* Jerzy Duda- Gracz
+
+![](1.jpg)
 
 
-**Pieter de Hooch**
+* Elvaristo Baschenis
+
+![](3.jpg)
+
+
+
+* Pieter de Hooch
+
+![](2.jpg)
 
 ## Wykorzystywanie chleba podczas spędzania wolnego czasu
 
